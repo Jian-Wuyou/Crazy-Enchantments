@@ -39,6 +39,15 @@ public class CEItem {
         return vanillaEnchantments.getOrDefault(enchantment, 0);
     }
     
+    public boolean vanillaEnchantmentConflictsWith(Enchantment enchantment) {
+        for(Enchantment i : vanillaEnchantments.keySet()) {
+            if(enchantment.conflictsWith(i)) {
+                return true;
+            }
+        }
+        return false;
+    }
+    
     public Map<Enchantment, Integer> getVanillaEnchantments() {
         return vanillaEnchantments;
     }
