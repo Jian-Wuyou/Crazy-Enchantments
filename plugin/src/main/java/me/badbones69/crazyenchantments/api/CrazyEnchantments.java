@@ -54,6 +54,7 @@ public class CrazyEnchantments {
     private boolean enchantStackedItems;
     private boolean maxEnchantmentCheck;
     private boolean checkVanillaLimit;
+    private boolean allowIncompatibleVanillaEnchantments;
     private ItemBuilder enchantmentBook;
     private NMSSupport nmsSupport;
     private Random random = new Random();
@@ -110,6 +111,7 @@ public class CrazyEnchantments {
         }
         whiteScrollProtectionName = Methods.color(config.getString("Settings.WhiteScroll.ProtectedName"));
         enchantmentBook = new ItemBuilder().setMaterial(config.getString("Settings.Enchantment-Book-Item"));
+        allowIncompatibleVanillaEnchantments = config.getBoolean("Settings.BlackSmith.AllowIncompatibleVanillaEnchantments");
         useUnsafeEnchantments = config.getBoolean("Settings.EnchantmentOptions.UnSafe-Enchantments");
         maxEnchantmentCheck = config.getBoolean("Settings.EnchantmentOptions.MaxAmountOfEnchantmentsToggle");
         checkVanillaLimit = config.getBoolean("Settings.EnchantmentOptions.IncludeVanillaEnchantments");
@@ -413,6 +415,14 @@ public class CrazyEnchantments {
      */
     public boolean useUnsafeEnchantments() {
         return useUnsafeEnchantments;
+    }
+    
+    /**
+     * Check if the config has unsafe enchantments enabled.
+     * @return True if enabled and false if not.
+     */
+    public boolean allowIncompatibleVanillaEnchantments() {
+        return allowIncompatibleVanillaEnchantments;
     }
     
     public boolean useMaxEnchantmentLimit() {
