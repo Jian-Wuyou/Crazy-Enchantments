@@ -44,6 +44,7 @@ public class BlackSmithManager {
         levelUp = config.getInt("Settings.BlackSmith.Transaction.Costs.Power-Up", 5);
         addEnchantment = config.getInt("Settings.BlackSmith.Transaction.Costs.Add-Enchantment", 3);
         maxEnchantments = config.getBoolean("Settings.EnchantmentOptions.MaxAmountOfEnchantmentsToggle");
+        allowIncompatibleVanillaEnchantments = config.getBoolean("Settings.BlackSmith.AllowIncompatibleVanillaEnchantments");
     }
     
     public ItemStack getDenyBarrier() {
