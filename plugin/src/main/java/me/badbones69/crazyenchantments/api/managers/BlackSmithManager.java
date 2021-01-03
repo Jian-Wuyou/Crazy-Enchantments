@@ -92,4 +92,8 @@ public class BlackSmithManager {
         return maxEnchantments;
     }
     
+    public boolean allowIncompatibleVanillaEnchantments() {
+        return allowIncompatibleVanillaEnchantments;   
+    }
+    
 }
