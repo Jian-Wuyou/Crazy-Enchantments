@@ -90,6 +90,7 @@ Settings:
       - ''
       - '&eCost: &e&l$500'
   BlackSmith: #Options for the Black Smith
+    AllowIncompatibleVanillaEnchantments: false # Allows combining incompatible vanilla enchantments if true. Removes the incompatible enchantments if false. (e.g. combining a bow with infinity to another with mending)
     InGUI: true #In the GUI.
     Slot: 24 #Slot it is in.
     Item: 'ANVIL' #Item that shows in the GUI
