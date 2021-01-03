@@ -22,6 +22,7 @@ public class BlackSmithManager {
     private int levelUp;
     private int addEnchantment;
     private boolean maxEnchantments;
+    private boolean allowIncompatibleVanillaEnchantments;
     
     public static BlackSmithManager getInstance() {
         return instance;
